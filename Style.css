@@ -1,0 +1,34 @@
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    animation: slider 9s infinite;
+}
+
+.carousel img {
+    width: 1000px;
+    height: 500px;
+    object-fit: cover; /* Ensures the images are properly cropped */
+    flex-shrink: 0;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-1000px);
+    }
+    66.66% {
+        transform: translateX(-2000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
